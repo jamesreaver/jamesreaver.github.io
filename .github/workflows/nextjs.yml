@@ -1,0 +1,48 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: GitHub Pages deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build && npm run export && touch ./out/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: public
+          folder: out
