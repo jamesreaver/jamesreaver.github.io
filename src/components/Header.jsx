@@ -121,11 +121,7 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-                <MobileNavItem href="/uses">Uses</MobileNavItem>
+                <div>Coming soon...</div>
               </ul>
             </nav>
           </Popover.Panel>
@@ -408,9 +404,10 @@ export function Header() {
                   </AvatarContainer>
                 )}
               </div>
+
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                {false && <DesktopNavigation className="pointer-events-auto hidden md:block" />}
               </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">

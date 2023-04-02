@@ -1,0 +1,18 @@
+.cardDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.typing {
+  animation: typing .5s step-end infinite alternate;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  50% {
+    border-color: transparent
+  }
+}
