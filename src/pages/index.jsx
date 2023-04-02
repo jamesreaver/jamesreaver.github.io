@@ -335,7 +335,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I'm a software engineer in London. I graduated at Imperial College in Computer Engineering and worked for the UK Government, Amazon and Chase."
+          content="I’m a software engineer in London. I graduated at Imperial College in Computer Engineering and worked for the UK Government, Amazon and Chase."
         />
       </Head>
       <Container className="mt-9">
@@ -344,7 +344,7 @@ export default function Home({ articles }) {
             Engineer and playwright wannabe... or not to <span className="typing">be?</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            My name is James, I'm a software engineer in London. I graduated
+            My name is James, I’m a software engineer in London. I graduated
             at Imperial College in Computer Science, and since then I have
             worked for the British Government, Amazon and Chase. I love
             socialising, travelling, producing plays and radio shows.
