@@ -158,7 +158,7 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'JP.Morgan Chase',
+      company: 'JP.Morgan',
       title: 'Software Engineer II',
       logo: logoChase,
       start: '2022',
@@ -168,7 +168,7 @@ function Resume() {
       },
     },
     {
-      company: 'Amazon',
+      company: 'Amazon UK',
       title: 'Software Engineer',
       logo: logoAmazon,
       start: '2020',
@@ -235,7 +235,7 @@ function Education() {
   let institutes = [
     {
       name: 'Imperial College London',
-      subject: 'MEng. Computer Engineering',
+      subject: 'Computing (1st)',
       type: 'University',
       logo: logoImperial,
       start: '2014',
@@ -243,7 +243,7 @@ function Education() {
     },
     {
       name: 'St. David’s College, Cardiff',
-      subject: 'Maths, Further Maths, Physics',
+      subject: 'A-Levels (A*AA)',
       type: 'School',
       logo: logoStDavids,
       start: '2012',
@@ -335,19 +335,19 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m a software engineer in London. I graduated at Imperial College in Computer Engineering and worked for the UK Government, Amazon and Chase."
+          content="I’m a software engineer in London. I graduated at Imperial College in Computer Science and worked for the UK Government, Amazon and JP.Morgan."
         />
       </Head>
       <Container className="mt-9">
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Engineer and playwright wannabe... or not to <span className="typing">be?</span>
+            Engineer and playwright-to-be... or not to <span className="typing">be?</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            My name is James, I’m a software engineer in London. I graduated
-            at Imperial College in Computer Science, and since then I have
-            worked for the British Government, Amazon and Chase. I love
-            socialising, travelling, producing plays and radio shows.
+            My name is James, I’m a software engineer in London. I read Computer
+            Science at Imperial College London and worked for the British
+            Government, Amazon and JP.Morgan. I love socialising, travelling,
+            producing plays and radio shows.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
