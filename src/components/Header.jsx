@@ -254,7 +254,6 @@ export function Header() {
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
-    let upDelay = 64
 
     function setProperty(property, value) {
       document.documentElement.style.setProperty(property, value)
@@ -281,10 +280,6 @@ export function Header() {
       if (isInitial.current || scrollY < downDelay) {
         setProperty('--header-height', `${downDelay + height}px`)
         setProperty('--header-mb', `${-downDelay}px`)
-      } else if (top + height < -upDelay) {
-        let offset = Math.max(height, scrollY - upDelay)
-        setProperty('--header-height', `${offset}px`)
-        setProperty('--header-mb', `${height - offset}px`)
       } else if (top === 0) {
         setProperty('--header-height', `${scrollY + height}px`)
         setProperty('--header-mb', `${-scrollY}px`)
