@@ -339,15 +339,15 @@ export default function Home({ articles }) {
         />
       </Head>
       <Container className="mt-9">
-        <div className="max-w-xl">
+        <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Engineer and playwright-to-be... or not to <span className="typing">be?</span>
+            Engineer and playwright wannabe... or not to <span className="typing">be?</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            My name is James, I’m a software engineer in London. I read Computer
-            Science at Imperial College London and worked for the British
-            Government, Amazon and JP.Morgan. I love socialising, travelling,
-            producing plays and radio shows.
+            Hello! My name is James, I’m a software engineer in London. I
+            studied Computer Science at Imperial College London and worked for
+            the British Government, Amazon and JP.Morgan. I love socialising,
+            travelling, producing plays and radio shows.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -399,8 +399,7 @@ export default function Home({ articles }) {
 export async function getStaticProps() {
   return {
     props: {
-      articles: (await getAllArticles())
-        .slice(0, 3),
+      articles: (await getAllArticles()).slice(0, 3),
     },
   }
 }

@@ -2,7 +2,6 @@ import * as fs from "fs/promises"
 
 const MAX_LENGTH = 300;
 const HTML_TAGS_REGEX = /(<([^>]+)>)/ig;
-const UNPUBLISHED = ['d941a90dfc81', '4ea467d7f38'];
 const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jameshreaver`;
 
 export async function getAllArticles() {
@@ -12,13 +11,7 @@ export async function getAllArticles() {
 }
 
 function getArticles(articles) {
-  return articles
-    .filter(article => filterArticle(article))
-    .map(article => getArticle(article))
-}
-
-function filterArticle(article) {
-  return !UNPUBLISHED.some(tag => article.guid.includes(tag))
+  return articles.map(article => getArticle(article))
 }
 
 function getArticle(article) {
