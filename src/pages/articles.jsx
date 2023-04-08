@@ -45,7 +45,7 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <SimpleLayout
-        title="Articles about language, tech, and being a software engineer."
+        title="On language, technology, and software engineering."
         intro="From time to time, I write down some personal reflections or interesting findings of mine, especially if I believe other folks might find it helpful to read about them too."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

@@ -17,6 +17,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target="_blank"
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
@@ -101,7 +102,6 @@ export default function About() {
                 href="https://twitter.com/jameshreaver"
                 aria-label="Follow on Twitter"
                 icon={TwitterIcon}
-                target="_blank"
                 className="mt-4"
               >Follow on Twitter
               </SocialLink>
@@ -109,7 +109,6 @@ export default function About() {
                 href="https://www.linkedin.com/in/jameshreaver"
                 aria-label="Follow on LinkedIn"
                 icon={LinkedInIcon}
-                target="_blank"
                 className="mt-4"
               >Follow on LinkedIn
               </SocialLink>
@@ -117,7 +116,6 @@ export default function About() {
                 href="https://github.com/jameshreaver"
                 aria-label="Follow on GitHub"
                 icon={GitHubIcon}
-                target="_blank"
                 className="mt-4"
               >Follow on GitHub
               </SocialLink>
@@ -125,7 +123,6 @@ export default function About() {
                 href="https://medium.com/@jameshreaver"
                 aria-label="Follow on Medium"
                 icon={MediumIcon}
-                target="_blank"
                 className="mt-4"
               >Follow on Medium
               </SocialLink>
@@ -133,7 +130,8 @@ export default function About() {
                 href="/contact"
                 icon={MailIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >Drop a message
+              >
+              age
               </SocialLink>
             </ul>
           </div>
