@@ -7,6 +7,12 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
+  ArrowDownIcon,
+  BriefcaseIcon,
+  EducationIcon,
+  MailIcon,
+} from '@/components/Icons'
+import {
   TwitterIcon,
   InstagramIcon,
   GitHubIcon,
@@ -18,101 +24,24 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAmazon from '@/images/logos/amazon.svg'
-import logoNo10 from '@/images/logos/no10.svg'
-import logoChase from '@/images/logos/chase.svg'
-import logoImperial from '@/images/logos/imperial.svg'
-import logoStDavids from '@/images/logos/stdavids.svg'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import { education } from '@/data/education'
+import { roles } from '@/data/roles'
 
-function MailIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function BriefcaseIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-      <path
-        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function EducationIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-      	d="M16 6.28a1.23 1.23 0 0 0-.62-1.07l-6.74-4a1.27 1.27 0 0 0-1.28 0l-6.75 4a1.25 1.25 0 0 0 0 2.15l1.92 1.12v2.81a1.28 1.28 0 0 0 .62 1.09l4.25 2.45a1.28 1.28 0 0 0 1.24 0l4.25-2.45a1.28 1.28 0 0 0 .62-1.09V8.45l1.24-.73v2.72H16V6.28zm-3.73 5L8 13.74l-4.22-2.45V9.22l3.58 2.13a1.29 1.29 0 0 0 1.28 0l3.62-2.16zM8 10.27l-6.75-4L8 2.26l6.75 4z"
-        className="fill-zinc-400 dark:fill-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
 
 function Article({ article }) {
   return (
     <Card as="article">
-      <Card.Title href={article.link}>
-        {article.title}
-      </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
+      <Card.Title href={article.link}>
+        {article.title}
+      </Card.Title>
+      <Card.Description className="article-description">
+        {article.description}
+    </Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
   )
@@ -156,33 +85,6 @@ function Newsletter() {
 }
 
 function Resume() {
-  let resume = [
-    {
-      company: 'JP.Morgan',
-      title: 'Software Engineer II',
-      logo: logoChase,
-      start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Amazon UK',
-      title: 'Software Engineer',
-      logo: logoAmazon,
-      start: '2020',
-      end: '2022',
-    },
-    {
-      company: '10 Downing Street',
-      title: 'Full-Stack Developer',
-      logo: logoNo10,
-      start: '2018',
-      end: '2020',
-    },
-  ]
-
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -190,7 +92,7 @@ function Resume() {
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
+        {roles.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
@@ -232,25 +134,6 @@ function Resume() {
 }
 
 function Education() {
-  let institutes = [
-    {
-      name: 'Imperial College London',
-      subject: 'Computing (1st)',
-      type: 'University',
-      logo: logoImperial,
-      start: '2014',
-      end: '2018',
-    },
-    {
-      name: 'St. David’s College, Cardiff',
-      subject: 'A-Levels (A*AA)',
-      type: 'School',
-      logo: logoStDavids,
-      start: '2012',
-      end: '2014',
-    },
-  ]
-
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -258,7 +141,7 @@ function Education() {
         <span className="ml-3">Education</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {institutes.map((institute, instituteIndex) => (
+        {education.map((institute, instituteIndex) => (
           <li key={instituteIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image src={institute.logo} alt="" className="h-7 w-7" unoptimized />
@@ -388,7 +271,6 @@ export default function Home({ articles }) {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
             <Education />
-            {/*<Newsletter />*/}
           </div>
         </div>
       </Container>

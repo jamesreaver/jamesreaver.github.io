@@ -15,18 +15,20 @@ function Article({ article }) {
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
-          className="md:hidden"
+          className="md:hidden order-first"
           decorate
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description>{article.description}</Card.Description>
+        <Card.Description className="article-description">
+          {article.description}
+        </Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
-        className="mt-1 hidden md:block"
+        className="mt-1 hidden md:block order-first"
       >
         {formatDate(article.date)}
       </Card.Eyebrow>
@@ -50,8 +52,8 @@ export default function ArticlesIndex({ articles }) {
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
-            {articles.map((article, i) => (
-              <Article key={'article-'+i} article={article} />
+            {articles.map((article, articleIndex) => (
+              <Article key={'article-'+articleIndex} article={article} />
             ))}
           </div>
         </div>

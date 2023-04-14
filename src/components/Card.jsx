@@ -1,18 +1,8 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-
-function ChevronRightIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M6.75 5.75 9.25 8l-2.5 2.25"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+import {
+  ChevronRightIcon,
+} from '@/components/Icons'
 
 export function Card({ as: Component = 'div', className, children }) {
   return (
@@ -44,9 +34,12 @@ Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   )
 }
 
-Card.Description = function CardDescription({ children }) {
+Card.Description = function CardDescription({ children, className }) {
   return (
-    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400 cardDescription">
+    <p className={clsx(
+      className,
+      'relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400')
+    }>
       {children}
     </p>
   )
@@ -75,7 +68,7 @@ Card.Eyebrow = function CardEyebrow({
     <Component
       className={clsx(
         className,
-        'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
+        'relative z-10 mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
         decorate && 'pl-3.5'
       )}
       {...props}
