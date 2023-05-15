@@ -1,2 +1,7 @@
+User-agent: *
+Disallow: /*.png$
+Disallow: /*.pdf$
+Disallow: /*.jpg$
+
 User-agent: AdsBot-Google
 Disallow: /
