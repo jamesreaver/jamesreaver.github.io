@@ -36,7 +36,7 @@ export const quotes = [
     author: 'Bill Clinton',
   },
   {
-    text: 'Things don’t have to change the world to be important',
+    text: 'Things don’t have to change the world to be important.',
     author: 'Steve Jobs',
   },
   {
