@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Quote } from '@/components/Quote'
 
-export default function NotFound(quote) {
+export default function NotFound() {
   return (
     <>
       <Head>

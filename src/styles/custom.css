@@ -6,6 +6,10 @@
   -webkit-box-orient: vertical;
 }
 
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
 .typing {
   animation: typing .5s step-end infinite alternate;
   border-right: 3px solid;
@@ -15,4 +19,9 @@
   50% {
     border-color: transparent
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

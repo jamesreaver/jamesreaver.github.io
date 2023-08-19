@@ -8,10 +8,6 @@ export const quotes = [
     author: 'Socrates',
   },
   {
-    text: 'Our dilemma is that we hate change and love it at the same time; what we really want is for things to remain the same but get better.',
-    author: 'Sydney J. Harris',
-  },
-  {
     text: 'Change is the law of life, and those who look only to the past and present are certain to miss the future.',
     author: 'John F. Kennedy',
   },
@@ -20,16 +16,8 @@ export const quotes = [
     author: 'Albert Einstein',
   },
   {
-    text: 'If you can’t fly, then run. If you can’t run, then walk. If you can’t walk, then crawl. But whatever you do, you have to keep moving forward.',
-    author: 'Martin Luther King Jr.',
-  },
-  {
     text: 'If I’d asked my customers what they wanted, they’d have said ‘Don’t change anything.’',
     author: 'Henry Ford',
-  },
-  {
-    text: 'Change will not come if we wait for some other person or some other time. We are the ones we’ve been waiting for. We are the change that we seek.',
-    author: 'Barack Obama',
   },
   {
     text: 'The price of doing the same old thing is far higher than the price of change.',
