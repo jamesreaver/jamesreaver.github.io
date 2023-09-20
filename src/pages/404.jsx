@@ -16,7 +16,7 @@ export default function NotFound() {
         title="Uh oh!"
         intro="It looks like you have reached a page which does not exist. Maybe you were given an incorrect link or perhaps the site has changed. Change happens and it is beautiful."
       >
-        <Quote/>
+      <Quote />
       </SimpleLayout>
     </>
   )

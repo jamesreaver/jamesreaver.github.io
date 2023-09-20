@@ -36,7 +36,7 @@ function Article({ article }) {
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
-      <Card.Title href={article.link}>
+      <Card.Title href={article.link} target="_blank">
         {article.title}
       </Card.Title>
       <Card.Description className="article-description">

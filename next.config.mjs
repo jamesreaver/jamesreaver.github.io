@@ -9,9 +9,27 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: './',
   experimental: {
     scrollRestoration: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/romolo-tucano',
+        destination: '/books/romolo-tucano',
+        permanent: true,
+      },
+      {
+        source: '/russel-toucan',
+        destination: '/books/russel-toucan',
+        permanent: true,
+      },
+      {
+        source: '/hero-of-mistpeak',
+        destination: '/books/hero-of-mistpeak',
+        permanent: true,
+      },
+    ];
   },
 }
 

@@ -9,7 +9,7 @@ function Article({ article }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={article.link}>
+        <Card.Title href={article.link} target="_blank">
           {article.title}
         </Card.Title>
         <Card.Eyebrow

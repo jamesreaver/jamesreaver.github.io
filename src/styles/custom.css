@@ -6,6 +6,22 @@
   -webkit-box-orient: vertical;
 }
 
+.book-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.capitalise {
+  text-transform: capitalize
+}
+
+.max-w-xxs {
+  max-width: 16rem;
+}
+
 .fade-in {
   animation: fadeIn 0.5s;
 }
