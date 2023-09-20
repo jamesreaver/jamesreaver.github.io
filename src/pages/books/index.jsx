@@ -45,7 +45,7 @@ export default function Books() {
         />
       </Head>
       <SimpleLayout
-        title="It all started in my imagination just to end up in yours."
+        title="It all started in my imagination so it can end up in yours."
         intro="Sure, my daily job is to write computer code. Nonetheless, one of my greatest passions is to write books. Here are the stories I published over the years, since I was twelve years old."
       / >
       <Covers />
