@@ -45,8 +45,8 @@ export default function Books() {
         />
       </Head>
       <SimpleLayout
-        title="Stories that began in my imagination to end up in yours."
-        intro="Sure, my primary job is to write code. Nonetheless, one of my greatest passions is also to write books. Here are the stories I published over the years, since I was twelve years old."
+        title="It all started in my imagination just to end up in yours."
+        intro="Sure, my daily job is to write computer code. Nonetheless, one of my greatest passions is to write books. Here are the stories I published over the years, since I was twelve years old."
       / >
       <Covers />
       <Container className="mt-20 md:mt-24">
