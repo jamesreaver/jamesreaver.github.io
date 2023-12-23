@@ -5,16 +5,16 @@ import logoChase from '@/images/logos/chase.svg'
 export const roles = [
   {
     company: 'JP.Morgan',
-    title: 'Software Engineer II',
+    title: 'Software Engineer III',
     logo: logoChase,
     start: '2022',
     end: {
-      label: 'Present',
+      label: 'Now',
       dateTime: new Date().getFullYear(),
     },
   },
   {
-    company: 'Amazon UK',
+    company: 'Amazon',
     title: 'Software Engineer',
     logo: logoAmazon,
     start: '2020',

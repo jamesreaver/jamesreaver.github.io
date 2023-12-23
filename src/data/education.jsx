@@ -4,7 +4,7 @@ import logoStDavids from '@/images/logos/stdavids.svg'
 export const education = [
   {
     name: 'Imperial College London',
-    subject: 'Computing (1st)',
+    subject: 'MEng Computing (1st)',
     type: 'University',
     logo: logoImperial,
     start: '2014',
