@@ -10,17 +10,20 @@ export const romoloTucano = {
   synopsis: 'Romolo Tucano, rinomato pasticcere di Uccellisola, non riesce a godersi la sua dolce vita a causa delle azioni scellerate ed invadenti dei suoi parenti. Ricevuto l’invito al Concorso Nazionale di Pasticceria, si ritrova a dover smascherare un imbroglio di un gruppo di familiari a dir poco disonesti.',
   description: [
     'Odiosi i Parenti! è il primo episodio della serie di Romolo Tucano, una storia di 90 pagine per bambini e ragazzi interamente illustrata. Questo libro fu scritto un’estate di quindici anni fa, dopo vari tentativi di andare oltre al primo capitolo di molte idee precedenti. L’unica copia stampata si perse negli anni, e con essa anche la storia di Romolo Tucano non rimase che un caro ricordo. Fu mio padre a ritrovare il file con la storia e le illustrazioni originali, permettendo la pubblicazione di questa riedizione esclusiva che dipinge in modo divertente il mio mondo da dodicenne.',
-    'Romolo Tucano: Odiosi i Parenti! è disponibile per l’acquisto in formato fisico (copertina flessibile) in lingua italiana o inglese sul portale Amazon di ogni paese. L’edizione digitale per Apple Books e Amazon Kindle è attualmente in produzione.'
+    'Romolo Tucano: Odiosi i Parenti! è disponibile per l’acquisto in formato fisico (copertina flessibile) sul negozio online di Amazon. L’edizione digitale è inoltre disponibile per Amazon Kindle e Apple Books.'
   ],
   locale: 'it-IT',
   page: 'romolo-tucano',
   cover: coverRomoloTucano,
   profile: profileRusselToucan,
   language: 'Lingua: Italiano',
-  amazonText: 'Disponibile su Amazon',
   publishedText: '16 Giugno 2023',
   publishedDate: new Date('2023-06-16'),
-  linkAmazon: 'https://www.amazon.it/dp/B0C8FYKJXK?binding=paperback'
+  links: {
+    amazon: 'https://www.amazon.it/dp/B0C8FYKJXK?binding=paperback',
+    kindle: 'https://www.amazon.it/dp/B0C8FYKJXK?binding=kindle_edition',
+    apple: 'https://books.apple.com/book/id6474742094'
+  }
 }
 
 export const russelToucan = {
@@ -29,17 +32,20 @@ export const russelToucan = {
   synopsis: 'Russel Toucan, Canary Isle’s renowned pastry chef, is unable to enjoy his delightfully uneventful life by the actions of his nosy and meddling relatives. Invited to the National Pastry-Making Competition, he finds himself having to uncover a nasty deceit devised by some very unscrupulous kinsfolk.',
   description: [
     'Despicable Relatives! is the first episode of the Russel Toucan series, a fully illustrated 90-page story for children and young adults. This book was born one summer of fifteen years ago, after several attempts to get past the first chapter of many previous ideas. The only printed copy got lost over the years, and with it, nothing but a dear memory of Russel Toucan’s story was left. It was my father who found the file with the original story and illustrations, enabling the publication of this exclusive re-edition which paints in an amusing way the world of twelve-year-old me.',
-    'Russel Toucan: Despicable Relatives! is available for purchase in physical format (paperback) in English and Italian on each country’s Amazon online store. The Apple Books and Amazon Kindle digital editions are currently under production.'
+    'Russel Toucan: Despicable Relatives! is available for purchase in physical format (paperback) on the Amazon online store. The digital edition is also available on Amazon Kindle and Apple Books.'
   ],
   locale: 'en-GB',
   page: 'russel-toucan',
   cover: coverRusselToucan,
   profile: profileRusselToucan,
   language: 'Language: English',
-  amazonText: 'Available on Amazon',
-  publishedText: '1 September 2023',
+  publishedText: '1st September 2023',
   publishedDate: new Date('2023-09-01'),
-  linkAmazon: 'https://www.amazon.co.uk/dp/B0CH7V2FST?binding=paperback'
+  links: {
+    amazon: 'https://www.amazon.co.uk/dp/B0CH7V2FST?binding=paperback',
+    kindle: 'https://www.amazon.co.uk/dp/B0CH7V2FST?binding=kindle_edition',
+    apple: 'https://books.apple.com/book/id6474742540'
+  }
 }
 
 export const heroMistpeak = {
@@ -56,8 +62,7 @@ export const heroMistpeak = {
   cover: coverHeroMistpeak,
   profile: profileHeroMistpeak,
   language: 'Language: English',
-  amazonText: 'Not available',
   publishedText: 'Coming in April 2024',
   publishedDate: new Date('2024-04-01'),
-  linkAmazon: null
+  links: null
 }

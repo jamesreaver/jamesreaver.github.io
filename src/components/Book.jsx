@@ -19,13 +19,19 @@ function Tag({ className, href, children, icon: Icon }) {
   )
 }
 
-function LinkedTag({ className, href, children, icon: Icon }) {
+function StoreLinks({ className, links, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
-      <Link href={href} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
-        <span className="ml-4">{children}</span>
-      </Link>
+      <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+      {links.amazon && <Link href={links.amazon} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4">Amazon</span>
+      </Link>}
+      {links.kindle && <Link href={links.kindle} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4">Kindle</span>
+      </Link>}
+      {links.apple && <Link href={links.apple} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4">Apple Books</span>
+      </Link>}
     </li>
   )
 }
@@ -71,14 +77,12 @@ export default function Book({ book }) {
             </div>
           </div>
           <div className="lg:pl-20">
-            <ul role="list">{book.linkAmazon &&
-              <LinkedTag
-                href={book.linkAmazon}
-                aria-label={book.amazonText}
+            <ul role="list">{book.links &&
+              <StoreLinks
+                links = {book.links}
                 icon={BuyIcon}
                 className="mt-4"
-              >{book.amazonText}
-              </LinkedTag>}
+              />}
               <Tag
                 aria-label={book.publishedText}
                 icon={BookIcon}
