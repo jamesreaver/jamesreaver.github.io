@@ -72,7 +72,7 @@ export const heroMistpeak = {
   profile: profileHeroMistpeak,
   followText: 'Follow on Twitter',
   publishedText: 'Coming in June 2024',
-  publishedDate: new Date('2024-04-01'),
+  publishedDate: new Date('2024-06-01'),
   links: {
     twitter: 'https://www.twitter.com/heromistpeak',
     threads: 'https://www.threads.net/heromistpeak',
