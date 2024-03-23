@@ -4,9 +4,22 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import { BookIcon, LanguageIcon, BuyIcon } from '@/components/Icons'
 import { truncateText } from '@/lib/truncateText'
+import { BookIcon, BuyIcon } from '@/components/Icons'
+import { TwitterIcon } from '@/components/SocialIcons'
 
+function SocialLink({ className, href, children, icon: Icon, ...props }) {
+  return (
+    <li className={clsx(className, 'flex')}>
+      <Link href={href} {...props}
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+      >
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <span className="ml-4">{children}</span>
+      </Link>
+    </li>
+  )
+}
 
 function Tag({ className, href, children, icon: Icon }) {
   return (
@@ -24,10 +37,10 @@ function StoreLinks({ className, links, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
       {links.amazon && <Link href={links.amazon} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
-        <span className="ml-4">Amazon</span>
+        <span className="ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800">Amazon</span>
       </Link>}
       {links.kindle && <Link href={links.kindle} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
-        <span className="ml-4">Kindle</span>
+        <span className="ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800">Kindle</span>
       </Link>}
       {links.apple && <Link href={links.apple} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
         <span className="ml-4">Apple Books</span>
@@ -77,7 +90,8 @@ export default function Book({ book }) {
             </div>
           </div>
           <div className="lg:pl-20">
-            <ul role="list">{book.links &&
+            <ul role="list">
+              {book.links && book.links.amazon &&
               <StoreLinks
                 links = {book.links}
                 icon={BuyIcon}
@@ -89,12 +103,15 @@ export default function Book({ book }) {
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >{book.publishedText}
               </Tag>
-              <Tag
-                aria-label={book.language}
-                icon={LanguageIcon}
+              {book.links && book.links.twitter &&
+              <SocialLink
+                href={book.links.twitter}
+                aria-label={book.followText}
+                icon={TwitterIcon}
                 className="mt-4"
-              >{book.language}
-              </Tag>
+                target="_blank"
+              >{book.followText}
+              </SocialLink>}
             </ul>
           </div>
         </div>

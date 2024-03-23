@@ -14,12 +14,16 @@ export const romoloTucano = {
   ],
   locale: 'it-IT',
   page: 'romolo-tucano',
+  social: 'RomoloTucano',
   cover: coverRomoloTucano,
   profile: profileRusselToucan,
-  language: 'Lingua: Italiano',
+  followText: 'Segui su Twitter',
   publishedText: '16 Giugno 2023',
   publishedDate: new Date('2023-06-16'),
   links: {
+    twitter: 'https://www.twitter.com/romolotucano',
+    threads: 'https://www.threads.net/romolotucano',
+    instagram: 'https://www.instagram.com/romolotucano',
     amazon: 'https://www.amazon.it/dp/B0C8FYKJXK?binding=paperback',
     kindle: 'https://www.amazon.it/dp/B0C8FYKJXK?binding=kindle_edition',
     apple: 'https://books.apple.com/book/id6474742094'
@@ -36,12 +40,16 @@ export const russelToucan = {
   ],
   locale: 'en-GB',
   page: 'russel-toucan',
+  social: 'RusselToucan',
   cover: coverRusselToucan,
   profile: profileRusselToucan,
-  language: 'Language: English',
+  followText: 'Follow on Twitter',
   publishedText: '1st September 2023',
   publishedDate: new Date('2023-09-01'),
   links: {
+    twitter: 'https://www.twitter.com/russeltoucan',
+    threads: 'https://www.threads.net/russeltoucan',
+    instagram: 'https://www.instagram.com/russeltoucan',
     amazon: 'https://www.amazon.co.uk/dp/B0CH7V2FST?binding=paperback',
     kindle: 'https://www.amazon.co.uk/dp/B0CH7V2FST?binding=kindle_edition',
     apple: 'https://books.apple.com/book/id6474742540'
@@ -55,14 +63,22 @@ export const heroMistpeak = {
   description: [
     'The Hero of Mistpeak is a four-act theatre play inspired by the universe of the award-winning video game series of Fable. Set five years after the events of Fable III, this humurous tragedy narrates the political intrigues happening at the court of Albion after the rise of the Hero of Brightwall, as well as the rising tensions between Aurora, the Southern continent, and Samarkand to the West.',
     'Expect interweaving stories of love, journeys to far away lands and double-crosses, as each character secretly pursues the tasks that are most dear to their hearts and their morality. This and much, much more. After all, the future will reveal itself when it is ready to do so.',
-    'Part One comprises Act I and Act II and will be available for purchase in physical format (paperback) in April 2024. Part Two includes Act III and IV and is scheduled to be released in 2025, together with the respective Apple Books and Amazon Kindle digital editions.'
+    'Part One comprises Act I and Act II and will be available in physical format (paperback) in June 2024. Part Two includes Act III and IV and is scheduled to be released in 2025, together with the respective Apple Books and Amazon Kindle digital editions.'
   ],
   locale: 'en-GB',
   page: 'hero-of-mistpeak',
+  social: 'HeroMistpeak',
   cover: coverHeroMistpeak,
   profile: profileHeroMistpeak,
-  language: 'Language: English',
-  publishedText: 'Coming in April 2024',
+  followText: 'Follow on Twitter',
+  publishedText: 'Coming in June 2024',
   publishedDate: new Date('2024-04-01'),
-  links: null
+  links: {
+    twitter: 'https://www.twitter.com/heromistpeak',
+    threads: 'https://www.threads.net/heromistpeak',
+    instagram: 'https://www.instagram.com/heromistpeak',
+    amazon: null,
+    kindle: null,
+    apple: null
+  }
 }

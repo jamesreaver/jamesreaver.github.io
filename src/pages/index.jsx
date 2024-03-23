@@ -227,10 +227,10 @@ export default function Home({ articles }) {
             Engineer and playwright wannabe... or not to <span className="typing">be?</span>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hello! My name is James, I’m a software engineer in London. I
+            Hi! I am James, a software engineer in London, United Kingdom. I
             studied Computer Science at Imperial College London and worked for
-            the British Government, Amazon and JP.Morgan. I love socialising,
-            travelling, producing plays and radio shows.
+            the British Government, Amazon and JP.Morgan. My favourite things
+            involve travelling, coding, socialising and writing threatre plays.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
