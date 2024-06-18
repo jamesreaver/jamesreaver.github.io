@@ -5,8 +5,9 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { truncateText } from '@/lib/truncateText'
-import { BookIcon, BuyIcon } from '@/components/Icons'
-import { TwitterIcon } from '@/components/SocialIcons'
+import { BookIcon, LanguageIcon } from '@/components/Icons'
+import { InstagramIcon } from '@/components/SocialIcons'
+import { formatDate } from '@/lib/formatDate'
 
 function SocialLink({ className, href, children, icon: Icon, ...props }) {
   return (
@@ -43,7 +44,28 @@ function StoreLinks({ className, links, icon: Icon }) {
         <span className="ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800">Kindle</span>
       </Link>}
       {links.apple && <Link href={links.apple} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
-        <span className="ml-4">Apple Books</span>
+        <span className={!links.google ? "ml-4" : "ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800"}>Apple Books</span>
+      </Link>}
+      {links.google && <Link href={links.google} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4">Google Play</span>
+      </Link>}
+      {links.other && <span className="group flex ml-4 text-sm font-medium text-zinc-500 dark:text-zinc-500">{links.other}</span>}
+    </li>
+  )
+}
+
+function SocialLinks({ className, links, icon: Icon }) {
+  return (
+    <li className={clsx(className, 'flex')}>
+      <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+      {links.instagram && <Link href={links.instagram} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800">Instagram</span>
+      </Link>}
+      {links.threads && <Link href={links.threads} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4 pr-4 border-r border-zinc-100 dark:border-zinc-800">Threads</span>
+      </Link>}
+      {links.twitter && <Link href={links.twitter} target="_blank" className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500">
+        <span className="ml-4">Twitter</span>
       </Link>}
     </li>
   )
@@ -62,6 +84,7 @@ function Cover({ cover }) {
 export default function Book({ book }) {
   let title = book.title + ' - James Reaver';
   let description = truncateText(book.synopsis, 142)
+  let publishedText = book.publishedText || formatDate(book.publishedDate, book.locale)
   return (
     <>
       <Head>
@@ -77,6 +100,9 @@ export default function Book({ book }) {
             <h1 className="text-4xl text-wrap-balance font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               {book.title}
             </h1>
+            <h2 className="text-3xl text-wrap-balance font-light tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+              {book.subtitle}
+            </h2>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p className="font-serif italic text-lg">
                 {book.synopsis}
@@ -91,27 +117,23 @@ export default function Book({ book }) {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              {book.links && book.links.amazon &&
+              {book.links && book.links.apple &&
               <StoreLinks
                 links = {book.links}
-                icon={BuyIcon}
+                icon={BookIcon}
                 className="mt-4"
               />}
-              <Tag
-                aria-label={book.publishedText}
-                icon={BookIcon}
+              <SocialLinks
+                links = {book.links}
+                icon={InstagramIcon}
                 className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >{book.publishedText}
-              </Tag>
-              {book.links && book.links.twitter &&
-              <SocialLink
-                href={book.links.twitter}
-                aria-label={book.followText}
-                icon={TwitterIcon}
+              />
+              <Tag
+                aria-label={publishedText}
+                icon={LanguageIcon}
                 className="mt-4"
-                target="_blank"
-              >{book.followText}
-              </SocialLink>}
+              >{publishedText}
+              </Tag>
             </ul>
           </div>
         </div>
