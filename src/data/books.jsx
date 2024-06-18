@@ -63,7 +63,7 @@ export const russelToucan = {
 
 export const heroMistpeakOne = {
   title: 'The Hero of Mistpeak',
-  subtitle: 'Part One',
+  subtitle: null,
   synopsis: 'At the dawn of the Industrial Revolution, young Prince Elliot of Albion is promised to the son of the foreign King of Samarkand. However, his heart burns for a mysterious girl he met on a secret mission to Aurora: a journey which will spark a heinous war amongst all nations.',
   description: [
     'The Hero of Mistpeak is a theatre play inspired by the universe of the award-winning video game series of Fable. Set four years after the rise of the Heroine of Brightwall, this humurous drama narrates the political intrigues at the court of Albion, as well as the rising tensions between Aurora, the Southern continent, and Samarkand to the West.',
