@@ -110,6 +110,9 @@ export default function Book({ book }) {
               {book.description.map((line, lineIndex) =>
                 <p key={lineIndex}>{line}</p>
               )}
+              {book.footnote &&
+                <p className="text-xs tracking-tight text-zinc-500 dark:text-zinc-500">{book.footnote}</p>
+              }
             </div>
           </div>
           <div className="lg:pl-20">
