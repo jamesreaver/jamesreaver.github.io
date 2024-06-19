@@ -88,7 +88,7 @@ export const heroMistpeakOne = {
     amazon: null, // 'https://www.amazon.co.uk/dp/B0D6VXVRZS?binding=hardcover',
     kindle: null,
     apple: 'https://books.apple.com/book/id6504457644',
-    google: 'https://play.google.com/store/search?q=the%20hero%20of%20mistpeak&c=books',
+    google: 'https://play.google.com/store/books/details?id=IL8OEQAAQBAJ',
     other: null,
   }
 }
