@@ -10,7 +10,7 @@ import {
   LinkIcon,
 } from '@/components/Icons'
 import {
-  TwitterIcon,
+  ThreadsIcon,
   MediumIcon,
   GitHubIcon,
   LinkedInIcon,
@@ -92,20 +92,12 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink
-                href="https://twitter.com/jameshreaver"
-                aria-label="Follow on Twitter"
-                icon={TwitterIcon}
+                href="https://www.threads.net/@jameshreaver"
+                aria-label="Follow on Threads"
+                icon={ThreadsIcon}
                 className="mt-4"
                 target="_blank"
-              >Follow on Twitter
-              </SocialLink>
-              <SocialLink
-                href="https://www.linkedin.com/in/jameshreaver"
-                aria-label="Follow on LinkedIn"
-                icon={LinkedInIcon}
-                className="mt-4"
-                target="_blank"
-              >Follow on LinkedIn
+              >Follow on Threads
               </SocialLink>
               <SocialLink
                 href="https://github.com/jameshreaver"
@@ -114,6 +106,14 @@ export default function About() {
                 className="mt-4"
                 target="_blank"
               >Follow on GitHub
+              </SocialLink>
+              <SocialLink
+                href="https://www.linkedin.com/in/jameshreaver"
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+                className="mt-4"
+                target="_blank"
+              >Follow on LinkedIn
               </SocialLink>
               <SocialLink
                 href="https://medium.com/@jameshreaver"

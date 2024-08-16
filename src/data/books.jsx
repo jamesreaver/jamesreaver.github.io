@@ -20,7 +20,6 @@ export const romoloTucano = {
   social: 'RomoloTucano',
   cover: coverRomoloTucano,
   profile: profileRusselToucan,
-  followText: 'Segui su Twitter',
   publishedDate: new Date('2023-06-16'),
   publishedText: null,
   links: {
@@ -49,7 +48,6 @@ export const russelToucan = {
   social: 'RusselToucan',
   cover: coverRusselToucan,
   profile: profileRusselToucan,
-  followText: 'Follow on Twitter',
   publishedDate: new Date('2023-09-01'),
   publishedText: null,
   links: {
@@ -78,7 +76,6 @@ export const heroMistpeakOne = {
   social: 'HeroMistpeak',
   cover: coverHeroMistpeakOne,
   profile: profileHeroMistpeak,
-  followText: 'Follow on Twitter',
   publishedDate: new Date('2024-06-20'),
   publishedText: null,
   links: {
@@ -104,7 +101,6 @@ export const heroMistpeakTwo = {
   social: 'HeroMistpeak',
   cover: coverHeroMistpeakTwo,
   profile: profileHeroMistpeak,
-  followText: '',
   publishedDate: null,
   publishedText: null,
   links: {
@@ -130,7 +126,6 @@ export const heroMistpeakThree = {
   social: 'HeroMistpeak',
   cover: coverHeroMistpeakThree,
   profile: profileHeroMistpeak,
-  followText: '',
   publishedDate: null,
   publishedText: null,
   links: {

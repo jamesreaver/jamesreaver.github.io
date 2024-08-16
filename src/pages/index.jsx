@@ -13,7 +13,7 @@ import {
   MailIcon,
 } from '@/components/Icons'
 import {
-  TwitterIcon,
+  ThreadsIcon,
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
@@ -234,21 +234,21 @@ export default function Home({ articles }) {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com/jameshreaver"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-              target="_blank"
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/jameshreaver"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+              href="https://www.threads.net/@jameshreaver"
+              aria-label="Follow on Threads"
+              icon={ThreadsIcon}
               target="_blank"
             />
             <SocialLink
               href="https://github.com/jameshreaver"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
+              target="_blank"
+            />
+            <SocialLink
+              href="https://www.linkedin.com/in/jameshreaver"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
               target="_blank"
             />
             <SocialLink
