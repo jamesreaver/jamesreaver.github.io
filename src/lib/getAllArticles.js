@@ -1,18 +1,17 @@
 import * as fs from "fs/promises"
-import { articles } from '@/data/articles'
 
 const MAX_LENGTH = 300;
 const HTML_TAGS_REGEX = /(<([^>]+)>)/ig;
 const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jameshreaver`;
 
-export async function getAllArticlesOnline() {
+export async function getAllArticles() {
   return fetch(RSS_URL)
     .then(response => response.json())
     .then(data => getArticles(data.items))
 }
 
-export function getAllArticles() {
-  return articles.items.map(
+export function getArticles(articles) {
+  return articles.map(
     article => getArticle(article)
   )
 }
